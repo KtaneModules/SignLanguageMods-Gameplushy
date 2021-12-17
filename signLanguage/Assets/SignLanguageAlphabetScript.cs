@@ -124,13 +124,13 @@ public class SignLanguageAlphabetScript : ModuleScript
     }
 
 #pragma warning disable 414
-    private readonly string TwitchHelpMessage = @"[!{0} cycle] to cycle through all the signs. [!{0} left/right #] to press the left/right arrow # times. [!{0} submit] to submit your current answer.";
+    private readonly string TwitchHelpMessage = @"[!{0} cycle] to cycle through all the signs. [!{0} left/right #] to press the left/right arrow # times. Omitting # will press the arrow once. [!{0} submit] to submit your current answer.";
 #pragma warning restore 414
 
 
     private IEnumerator ProcessTwitchCommand(string command)
     {
-        string[] comSplit = command.ToUpper().Split();
+        string[] comSplit = command.Trim().ToUpper().Split();
         if (comSplit.Length == 1 && comSplit[0] == "CYCLE")
         {
             yield return new WaitUntil(() => userInputPossible);
@@ -143,9 +143,10 @@ public class SignLanguageAlphabetScript : ModuleScript
         else
         {
             List<KMSelectable> presses = new List<KMSelectable>();
-            int move;
-            if (comSplit.Length == 2 && (comSplit[0] == "LEFT" || comSplit[0] == "RIGHT") && int.TryParse(comSplit[1], out move))
+            int move=-1;
+            if ((comSplit[0] == "LEFT" || comSplit[0] == "RIGHT") && ((comSplit.Length == 2 && int.TryParse(comSplit[1], out move))||comSplit.Length==1))
             {
+                if (move == -1) move = 1;
                 KMSelectable arrowToUse = (comSplit[0] == "LEFT") ? Arrows[0] : Arrows[1];
                 for (int i = 0; i < move; i++)
                 {
@@ -153,7 +154,7 @@ public class SignLanguageAlphabetScript : ModuleScript
                 }
             }
             else if (comSplit.Length == 1 && comSplit[0] == "SUBMIT") presses.Add(Submit);
-            if (!presses.IsNullOrEmpty())
+            if (presses.Count!=0)
             {
                 yield return new WaitUntil(() => userInputPossible);
                 foreach (KMSelectable butt in presses)

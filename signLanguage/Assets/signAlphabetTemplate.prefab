@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4840825428029956}
   - component: {fileID: 23665561143381620}
   - component: {fileID: 102174490926771206}
+  - component: {fileID: 114502057523874938}
   m_Layer: 0
   m_Name: New Text
   m_TagString: Untagged
@@ -55,7 +56,7 @@ GameObject:
   - component: {fileID: 4287913867525860}
   - component: {fileID: 33368707364102810}
   - component: {fileID: 114004995332900832}
-  - component: {fileID: 23418648520941498}
+  - component: {fileID: 114566223498083294}
   m_Layer: 0
   m_Name: Cylinder (1)
   m_TagString: Untagged
@@ -74,6 +75,7 @@ GameObject:
   - component: {fileID: 33912527347858632}
   - component: {fileID: 23786929715884806}
   - component: {fileID: 114433382134563504}
+  - component: {fileID: 114006434884515910}
   m_Layer: 0
   m_Name: PreviousSign
   m_TagString: Untagged
@@ -127,6 +129,7 @@ GameObject:
   - component: {fileID: 33043020506159844}
   - component: {fileID: 23731834613378444}
   - component: {fileID: 114739546492289662}
+  - component: {fileID: 114529208840770266}
   m_Layer: 0
   m_Name: PreviousSign
   m_TagString: Untagged
@@ -230,6 +233,7 @@ GameObject:
   - component: {fileID: 33846994710289842}
   - component: {fileID: 23867947559575422}
   - component: {fileID: 114666362865178204}
+  - component: {fileID: 114155099038588026}
   m_Layer: 0
   m_Name: NextSign
   m_TagString: Untagged
@@ -248,6 +252,7 @@ GameObject:
   - component: {fileID: 33068686282767188}
   - component: {fileID: 23915759097754676}
   - component: {fileID: 114053129137221788}
+  - component: {fileID: 114371939721516536}
   m_Layer: 0
   m_Name: NextSign
   m_TagString: Untagged
@@ -329,10 +334,11 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4886438396190034}
-  - component: {fileID: 114935517029135806}
   - component: {fileID: 114983405501088418}
   - component: {fileID: 114898137706358846}
   - component: {fileID: 95804674316212920}
+  - component: {fileID: 114992718977303996}
+  - component: {fileID: 114929157982738682}
   m_Layer: 0
   m_Name: signAlphabetTemplate
   m_TagString: Untagged
@@ -637,40 +643,6 @@ Transform:
   m_Father: {fileID: 4744208251930270}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23418648520941498
-MeshRenderer:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1067046388771960}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_Materials:
-  - {fileID: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
 --- !u!23 &23621195064737754
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -1065,7 +1037,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1027952080208238}
-  m_Text: W
+  m_Text: A
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -1092,6 +1064,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HighlightScale: {x: 0, y: 0, z: 0}
   OutlineAmount: 0
+--- !u!114 &114006434884515910
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1126597079624184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1005838349, guid: 45b809be76fd7a3468b6f517bced6f28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShaderNames:
+  - KT/Mobile/DiffuseTint
 --- !u!114 &114053129137221788
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1127,12 +1112,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HighlightScale: {x: 1, y: 1, z: 1}
   OutlineAmount: 0
+--- !u!114 &114155099038588026
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1610516471364184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1005838349, guid: 45b809be76fd7a3468b6f517bced6f28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShaderNames:
+  - KT/Mobile/DiffuseTint
 --- !u!114 &114339152888305892
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1237462203105550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1005838349, guid: 45b809be76fd7a3468b6f517bced6f28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShaderNames:
+  - KT/Mobile/DiffuseTint
+--- !u!114 &114371939721516536
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1672199701669394}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -1005838349, guid: 45b809be76fd7a3468b6f517bced6f28, type: 3}
@@ -1187,7 +1198,45 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShaderNames:
-  - Standard
+  - KT/Mobile/DiffuseTint
+--- !u!114 &114502057523874938
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1027952080208238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1005838349, guid: 45b809be76fd7a3468b6f517bced6f28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShaderNames:
+  - GUI/KT 3D Text Diffuse
+--- !u!114 &114529208840770266
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1341956890892038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1005838349, guid: 45b809be76fd7a3468b6f517bced6f28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShaderNames:
+  - KT/Mobile/DiffuseTint
+--- !u!114 &114566223498083294
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1067046388771960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1005838349, guid: 45b809be76fd7a3468b6f517bced6f28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShaderNames: []
 --- !u!114 &114629054966776026
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1360,7 +1409,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HighlightScale: {x: 0, y: 0, z: 0}
   OutlineAmount: 0
---- !u!114 &114935517029135806
+--- !u!114 &114929157982738682
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -1368,11 +1417,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1946201579242192}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53e66dfed13c8864a9abc54f943cb9be, type: 3}
+  m_Script: {fileID: -1675560866, guid: 45b809be76fd7a3468b6f517bced6f28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SolveButton: {fileID: 0}
-  AddTimeButton: {fileID: 114883666935825438}
 --- !u!114 &114983405501088418
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1390,7 +1437,63 @@ MonoBehaviour:
   ModuleType: signAlphabet
   ModuleDisplayName: Sign Alphabet
   RequiresTimerVisibility: 0
-  WarnAtFiveSeconds: 1
+  WarnAtFiveSeconds: 0
+--- !u!114 &114992718977303996
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1946201579242192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc015d0818f16eb418ee7b169f706f3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _editorRuleSeed: 1
+  SignSubmit: {fileID: 114993116014076042}
+  LetterSubmit: {fileID: 114883666935825438}
+  SignArrows:
+  - {fileID: 114739546492289662}
+  - {fileID: 114666362865178204}
+  LetterArrows:
+  - {fileID: 114433382134563504}
+  - {fileID: 114053129137221788}
+  SA:
+  - {fileID: 1341956890892038}
+  - {fileID: 1610516471364184}
+  LA:
+  - {fileID: 1126597079624184}
+  - {fileID: 1672199701669394}
+  Needy: {fileID: 114983405501088418}
+  LetterDisplay: {fileID: 102174490926771206}
+  Signs:
+  - {fileID: 21300000, guid: 63a798b0793897d49946f856af7be78e, type: 3}
+  - {fileID: 21300000, guid: 4712a1e867179be48bfdb780e7896daa, type: 3}
+  - {fileID: 21300000, guid: 22207d1deae588b46a008f2cd62c8787, type: 3}
+  - {fileID: 21300000, guid: 38b8f1056f9a5fa41bff82da534d5ddc, type: 3}
+  - {fileID: 21300000, guid: eafde89020562cd47b2c3d533fa3d604, type: 3}
+  - {fileID: 21300000, guid: e043a7334a7ea5543a9ffe0d24a888f9, type: 3}
+  - {fileID: 21300000, guid: 2c434a8623f388d4aa3bd7ae27302c4a, type: 3}
+  - {fileID: 21300000, guid: 2ff3e774b8c82604286397fdfd3d536e, type: 3}
+  - {fileID: 21300000, guid: af9e2b419dd2b4a4da5766a34afe7bc9, type: 3}
+  - {fileID: 21300000, guid: 45d99cbcdac530b44b027114224e9234, type: 3}
+  - {fileID: 21300000, guid: 2cceb0a310d354643b2a2f3c326e40df, type: 3}
+  - {fileID: 21300000, guid: d32b210ba1e948e438c5d8ce0690faf3, type: 3}
+  - {fileID: 21300000, guid: abbf0a1458b289542a0cf2600912ac42, type: 3}
+  - {fileID: 21300000, guid: 96325018a47ab124ea10d5a04897f1f2, type: 3}
+  - {fileID: 21300000, guid: 5c18f8af3ecb70349bfcda5867678ea9, type: 3}
+  - {fileID: 21300000, guid: 03e0524a2c9863d448da71c965885af0, type: 3}
+  - {fileID: 21300000, guid: 39a9de77aeb670a45917fcc4646e3752, type: 3}
+  - {fileID: 21300000, guid: 59de50a6692cd6841a9bb12547e84088, type: 3}
+  - {fileID: 21300000, guid: 6a97c6a21ca9c6740ab50e310d051bf9, type: 3}
+  - {fileID: 21300000, guid: e93aa0aa117d09d49bad86598ff30f70, type: 3}
+  - {fileID: 21300000, guid: 88b3a9766c3113f449d1af80c6c79589, type: 3}
+  - {fileID: 21300000, guid: 360e6dd3a8c305b47b407c24fe656455, type: 3}
+  - {fileID: 21300000, guid: 65379476bc5fca842a12d23d63793de1, type: 3}
+  - {fileID: 21300000, guid: fb926a19b77d5bc41a2d785a144ef72d, type: 3}
+  - {fileID: 21300000, guid: cc60dc8849777c149b018808c2ea1368, type: 3}
+  - {fileID: 21300000, guid: 8f47b60bd252a0341a462ad8fda587be, type: 3}
+  SignDisplay: {fileID: 212896323261184238}
 --- !u!114 &114993116014076042
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1402,7 +1505,7 @@ MonoBehaviour:
   m_Script: {fileID: 1702003387, guid: 45b809be76fd7a3468b6f517bced6f28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Parent: {fileID: 0}
+  Parent: {fileID: 114898137706358846}
   Children: []
   IsPassThrough: 0
   ChildRowLength: 0

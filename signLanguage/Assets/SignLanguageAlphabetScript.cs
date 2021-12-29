@@ -144,7 +144,7 @@ public class SignLanguageAlphabetScript : ModuleScript
         {
             List<KMSelectable> presses = new List<KMSelectable>();
             int move=-1;
-            if ((comSplit[0] == "LEFT" || comSplit[0] == "RIGHT") && ((comSplit.Length == 2 && int.TryParse(comSplit[1], out move))||comSplit.Length==1))
+            if ((comSplit[0] == "LEFT" || comSplit[0] == "RIGHT") && ((comSplit.Length == 2 && int.TryParse(comSplit[1], out move)) || comSplit.Length == 1))
             {
                 if (move == -1) move = 1;
                 KMSelectable arrowToUse = (comSplit[0] == "LEFT") ? Arrows[0] : Arrows[1];
@@ -153,7 +153,11 @@ public class SignLanguageAlphabetScript : ModuleScript
                     presses.Add(arrowToUse);
                 }
             }
-            else if (comSplit.Length == 1 && comSplit[0] == "SUBMIT") presses.Add(Submit);
+            else if (comSplit.Length == 1 && comSplit[0] == "SUBMIT")
+            {
+                presses.Add(Submit);
+                if (index == desiredAnswer) yield return "solve"; else yield return "strike";
+            }
             if (presses.Count!=0)
             {
                 yield return new WaitUntil(() => userInputPossible);

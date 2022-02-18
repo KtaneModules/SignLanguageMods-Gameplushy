@@ -29,8 +29,8 @@ public static class Data
         new Entry("REFUGEE",6),
         new Entry("SWINGER",3),
         new Entry("BALANCE",0),
-        new Entry("LIQUIDS",4),
-        new Entry("VOYAGED",5),
+        new Entry("LIQUIDS",3),
+        new Entry("VOYAGED",4),
     };
 
     public static int[] FingersLift = new int[] { 0, 4, 0, 1, 0, 3, 1, 2, 1, 1, 2, 2, 0, 0, 0, 1, 1, 2, 0, 0, 2, 2, 3, 0, 1, 1 };

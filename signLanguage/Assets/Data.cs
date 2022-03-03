@@ -33,5 +33,5 @@ public static class Data
         new Entry("VOYAGED",4),
     };
 
-    public static int[] FingersLift = new int[] { 0, 4, 0, 1, 0, 3, 1, 2, 1, 1, 2, 2, 0, 0, 0, 1, 1, 2, 0, 0, 2, 2, 3, 0, 1, 1 };
+    public static int[] FingersLift = new int[] { 0, 4, 0, 1, 0, 3, 1, 2, 1, 1, 2, 1, 0, 0, 0, 1, 1, 2, 0, 0, 2, 2, 3, 0, 1, 1 };
 }

@@ -25,6 +25,6 @@ MonoBehaviour:
 
 
     Props to Sideral9999 for the main idea!'
-  version: 2.2
+  version: 2.3
   outputFolder: build
   previewImage: {fileID: 2800000, guid: 6c2bc434fc8fac347b9ce2a80ff538a2, type: 3}
